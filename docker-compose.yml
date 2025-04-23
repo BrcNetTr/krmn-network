@@ -1,3 +1,4 @@
+# docker-compose.yml (nginx proxy için)
 services:
   nginx-proxy:
     image: jwilder/nginx-proxy
@@ -12,7 +13,6 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - webproxy
-    restart: always
 
   nginx-proxy-ssl:
     image: jrcs/letsencrypt-nginx-proxy-companion
@@ -24,11 +24,8 @@ services:
       - /etc/nginx/certs:/etc/nginx/certs
       - /etc/nginx/vhost.d
       - /usr/share/nginx/html
-    depends_on:
-      - nginx-proxy
     networks:
       - webproxy
-    restart: always
 
 networks:
   webproxy:
