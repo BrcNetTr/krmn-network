@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   # Nginx Proxy
   nginx-proxy:
