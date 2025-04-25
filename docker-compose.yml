@@ -34,8 +34,8 @@ services:
 
   # Uygulamanız (örneğin, MVC API uygulamanız)
   brc-mvc-api:
-    image: brc-mvc-api-image # Uygulama imajınız
-    container_name: brc-mvc-api
+    image: brc-mvc-api # Uygulama imajınız
+    container_name: brc-mvc-api-1
     environment:
       - VIRTUAL_HOST=krmndemo.online
       - VIRTUAL_PORT=5000
